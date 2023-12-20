@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+function getDaysInMonth(month) {
+    switch (month) {
+        case 1: // Tháng 1
+        case 3: // Tháng 3
+        case 5: // Tháng 5
+        case 7: // Tháng 7
+        case 8: // Tháng 8
+        case 10: // Tháng 10
+        case 12: // Tháng 12
+            return 31;
+        case 4: // Tháng 4
+        case 6: // Tháng 6
+        case 9: // Tháng 9
+        case 11: // Tháng 11
+            return 30;
+        case 2: // Tháng 2
+            return 28; // Hoặc 29 nếu là năm nhuận
+        default:
+            return "Tháng không hợp lệ";
+    }
+}
+
+// Nhập số tháng từ người dùng
+var month = parseInt(prompt("Nhập vào số tháng (từ 1 đến 12):"));
+
+// Kiểm tra nếu số tháng hợp lệ
+if (month >= 1 && month <= 12) {
+    var daysInMonth = getDaysInMonth(month);
+    alert("Tháng " + month + " có " + daysInMonth + " ngày.");
+} else {
+    alert("Số tháng không hợp lệ. Vui lòng nhập lại từ 1 đến 12.");
+}
+
+	</script>
+</body>
+</html>

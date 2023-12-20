@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+function getInput(promptMessage) {
+			let value;
+			do {
+				value = +prompt(promptMessage);
+			} while (isNaN(value) || value < 0 || value > 10);
+			return value;
+		}
+
+		let toan =getInput("nhập điểm toán:");
+		let ly =getInput("nhập điểm lý:");
+		let hoa =getInput("nhập điểm hoá:");
+		let van =getInput("nhập điểm văn:");
+		let su =getInput("nhập điểm sử:");
+		let dia =getInput("nhập điểm địa:");
+
+		let result =(toan+ly+hoa+van+su+dia)/5;
+
+		if(result <5 ) {
+			alert(result+" xếp loại yếu");
+		}else if (result >=5 && result <= 6.4) {
+			alert(result+" xếp loại trung bình");
+		}else if (result >=6.5 && result <= 7.9) {
+			alert(result+" xếp loại khá");
+		}else {
+			alert(result+" xếp loại giỏi");
+		}
+
+	</script>
+</body>
+</html>
